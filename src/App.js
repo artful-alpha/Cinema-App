@@ -1,4 +1,9 @@
 import "./App.css";
+/* eslint-disable */
+
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "remote-redux-devtools";
+/* eslint-enable */
 
 function App() {
   return (
