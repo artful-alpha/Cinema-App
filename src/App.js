@@ -1,26 +1,28 @@
-import "./App.css";
+import "./App.scss";
+import Main from "./components/main";
+import { Provider } from "react-redux";
+import { store } from "./store";
+
 /* eslint-disable */
 
-import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "remote-redux-devtools";
+// add node sass
+
 /* eslint-enable */
+import Header from "./components/Header";
 
 function App() {
+  /* eslint-disable */
+
+  /* eslint-enable */
   return (
-    <div className='App'>
-      Hello
-      <ul>
-        <li>
-          <a href=''>1</a>
-        </li>
-        <li>
-          <a href=''>2</a>
-        </li>
-        <li>
-          <a href=''>3</a>
-        </li>
-      </ul>
-    </div>
+    <Provider store={store}>
+      <div className='App'>
+        <div className='wrapper'>
+          <Header />
+          <Main />
+        </div>
+      </div>
+    </Provider>
   );
 }
 
