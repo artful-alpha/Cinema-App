@@ -3,13 +3,9 @@ import Main from "./components/main";
 import { Provider } from "react-redux";
 import { store } from "./store";
 
-/* eslint-disable */
-
-// add node sass
-
-/* eslint-enable */
 import Header from "./components/Header";
 
+/* eslint-enable */
 function App() {
   /* eslint-disable */
 

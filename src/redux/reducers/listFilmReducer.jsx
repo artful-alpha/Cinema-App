@@ -1,9 +1,12 @@
-const defaultState = { films: [] };
+const defaultState = { films: ["One"] };
 
 function listFilmReducer(state = defaultState, action) {
   switch (action.type) {
     default:
-      return state;
+      return {
+        ...state,
+        films: action.payload,
+      };
   }
 }
 

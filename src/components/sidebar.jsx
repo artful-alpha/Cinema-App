@@ -8,6 +8,7 @@ const sidebar = () => {
   return (
     <div className='sidebar'>
       <FilterBox />
+
       <div className='sorted-box'>
         <SortedSelector />
         <DateReliz />
