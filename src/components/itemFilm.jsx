@@ -1,5 +1,6 @@
 import FilmImg from "./filmImg";
-const itemFilm = () => {
+/* eslint-disable */
+const itemFilm = ({ filmName }) => {
   return (
     <div className='item-film'>
       <FilmImg />
@@ -9,9 +10,7 @@ const itemFilm = () => {
           <p className='film-stars'>★</p>
           <p className='film-bookmarks'>🏲</p>
         </div>
-        <div className='film-desctiption'>
-          Истребитель демонов: «Поезд Бесконечный»
-        </div>
+        <div className='film-desctiption'>{filmName}</div>
         <div className='film-more'>
           <p>
             <a href='/'>Подробней</a>

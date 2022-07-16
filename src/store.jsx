@@ -1,8 +1,12 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
-import listFilm from "./redux/reducers/listFilmReducer";
+import filmsFilterReducer from "./redux/reducers/filmsFilterReducer";
+import thunk from "redux-thunk";
 const AppFilm = combineReducers({
-  listFilm,
+  filmsFilterReducer,
 });
 
-export const store = createStore(AppFilm, composeWithDevTools());
+export const store = createStore(
+  AppFilm,
+  composeWithDevTools(applyMiddleware(thunk))
+);
