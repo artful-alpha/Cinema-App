@@ -5,21 +5,25 @@ import Sidebar from "./sidebar";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux/es/exports";
 import useGetFilms from "../redux/selector/useGetFilms";
+import { useGetPage } from "../redux/selector/useGetPage";
+import { getPages } from "../utils/helpUtils";
+import ItemFilm from "./ItemFilm";
 
 const main = () => {
   const nowFilterFilms = useGetFilms();
-
+  const page = useSelector(useGetPage);
+  
   return (
     <div className='countainer-content'>
       <Sidebar />
       <div className='container-films'>
-        {nowFilterFilms.map((item) => (
-          <p key={item.popularity}>
-            {item.popularity}
-            {item.title}
-            <br />
-          </p>
+      {nowFilterFilms.slice(...getPages(page)).map((item) => (
+          <ItemFilm key={item.id} {...item}/> 
         ))}
+
+        {/* {nowFilterFilms.map((item) => (
+          <ItemFilm key={item.id} {...item}/> 
+        ))} */}
       </div>
     </div>
   );

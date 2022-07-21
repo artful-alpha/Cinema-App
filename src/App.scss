@@ -53,14 +53,13 @@ header {
       margin: 0 2px;
       color: white;
       font-weight: 500;
-    }
-    .active {
       background: #027bff;
+      &:disabled {
+        background: #5aaaff;
+        color: rgb(230, 230, 230);
+      }
     }
-    .inactive {
-      background: #5aaaff;
-      color: rgb(230, 230, 230);
-    }
+
     .filters-box {
       // margin: 15px 0;
       .filters.title {
@@ -111,10 +110,9 @@ header {
 }
 .container-films {
   background: rgb(255, 131, 131);
-
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   .item-film {
     display: flex;
     height: 275px;
