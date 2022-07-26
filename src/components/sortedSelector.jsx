@@ -11,7 +11,7 @@ const sortedSelector = () => {
 
   
   const sorting = (e) => {
-    console.log(e.target.value)
+ 
     dispatch(setSortedSelector(e.target.value))
   }
   return (

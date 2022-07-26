@@ -4,12 +4,16 @@ export const typeSorted = {
   RATING_DOWN: "RATING_DOWN",
   RATING_UP: "RATING_UP",
 };
-
+export const userOptionsChoiceData = [
+  { value: "default", title: "По-умолчанию" },
+  { value: "later", title: "Смотреть позже" },
+  { value: "favorites", title: "Избранные" },
+];
 export const defaultFilmFilterState = {
   sortedSelect: "POPULARITY_DOWN",
   yearSelect: 0,
-  genreSelect: [],
-  page: 24
+  genreSelect: [ ],
+  page: 1
 };
 
 export const pagesControl = {
@@ -22,3 +26,12 @@ export const sortOptionsData = [
   { value: typeSorted.RATING_DOWN, title: "Рейтинг по убыванию" },
   { value: typeSorted.RATING_UP, title: "Рейтинг по возрастанию" },
 ];
+
+export const yearOptionsData = [
+  { value: 0, title: "По умолчанию" },
+  { value: 2020, title: "2020" },
+  { value: 2019, title: "2019" },
+  { value: 2018, title: "2018" },
+  { value: 2017, title: "2017" },
+];
+

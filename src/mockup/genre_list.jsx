@@ -1,4 +1,4 @@
-[
+const genre_list= [
   {
     "id": 28,
     "name": "боевик"
@@ -76,3 +76,4 @@
     "name": "вестерн"
   }
 ]
+export default  genre_list 

@@ -1,20 +1,19 @@
+/*eslint-disable*/
+import    genre_list   from "../mockup/genre_list";
+import { useDispatch } from "react-redux"; 
+import CheckBox from "../components/CheckBox"
+
 const genreFilm = () => {
+ 
   return (
     <div className='film-genre-box'>
       <p className='film-genre title'>Жанр:</p>
 
-      <label htmlFor='Боевик'>
-        <input id='Боевик' type='checkbox' />
-        боевик
-      </label>
-      <label htmlFor='Ужасы'>
-        <input id='Ужасы' type='checkbox' />
-        ужасы
-      </label>
-      <label htmlFor='html'>
-        <input id='html' type='checkbox' />
-        Комедия
-      </label>
+  
+      {genre_list.map(item => (
+        <CheckBox key={item.id} id={item.id} name={item.name}/>
+        
+      ))}
     </div>
   );
 };

@@ -30,3 +30,8 @@ export function sortedFilm(sort) {
 export const getPages = (page)=>{
   return [(page*10)-10, (page*10)]
 }
+
+export const updateGenre = (arr, id)=>{
+  const includesList = arr.includes(id);
+  return includesList   ?  arr.filter(item => item != id ) : [...arr, id];
+}
