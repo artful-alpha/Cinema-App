@@ -35,3 +35,9 @@ export const yearOptionsData = [
   { value: 2017, title: "2017" },
 ];
 
+
+export const USER_CHOICE = {
+  DEFAULT: "default",
+  LATER: "later",
+  FAVORITES: "favorites",
+};

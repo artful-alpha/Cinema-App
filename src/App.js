@@ -1,15 +1,16 @@
 import "./App.scss";
+  /* eslint-disable */
 import Main from "./components/main";
-import { Provider } from "react-redux";
+import { Provider, useSelector } from "react-redux";
 import { store } from "./store";
 
 import Header from "./components/Header";
 
-/* eslint-enable */
-function App() {
-  /* eslint-disable */
 
-  /* eslint-enable */
+function App() {
+   
+
+
   return (
     <Provider store={store}>
       <div className='App'>

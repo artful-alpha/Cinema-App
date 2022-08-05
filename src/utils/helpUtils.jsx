@@ -35,3 +35,8 @@ export const updateGenre = (arr, id)=>{
   const includesList = arr.includes(id);
   return includesList   ?  arr.filter(item => item != id ) : [...arr, id];
 }
+
+export const updateUserChoise = ( arr, id)=>{
+  const includesList = arr.includes(id);
+  return includesList ? arr.filter(item=> item != id ) : [...arr, id];
+}

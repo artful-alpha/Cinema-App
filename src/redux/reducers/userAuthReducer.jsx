@@ -1,5 +1,5 @@
 import { logining } from "../action/setLogining";
-const initialState = {auth: false};
+const initialState = {auth: JSON.parse(localStorage.getItem("authStatus"))? true: false };
 
  
 export default function userAuthReducer(state=initialState, action) {

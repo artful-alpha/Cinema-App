@@ -1,11 +1,13 @@
 /*eslint-disable*/
+import { useSelector } from "react-redux";
 import { userOptionsChoiceData } from "../config/const";
 import { useDispatch } from "react-redux";
+import { setUserChoise } from "../redux/action/setUserChoiseFilter";
 export default function UserAuthSort() {
-    const dispath = useDispatch();
-
-    const sortedDate = (e) =>{
-    console.log(e.target.value)
+ 
+    const auth = useSelector((state)=>state.userAuthReducer.auth);
+    const dispatch = useDispatch();
+    const sortedDate = (e) =>{  dispatch(setUserChoise(e.target.value))
     }
   
   

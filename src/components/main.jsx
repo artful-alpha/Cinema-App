@@ -8,11 +8,18 @@ import useGetFilms from "../redux/selector/useGetFilms";
 import { useGetPage } from "../redux/selector/useGetPage";
 import { getPages } from "../utils/helpUtils";
 import ItemFilm from "./ItemFilm";
+ import { useGetChoiseFilms } from "../redux/selector/useGetChoiseFilms";
 
 const main = () => {
   const nowFilterFilms = useGetFilms();
   const page = useSelector(useGetPage);
-  
+  const userChoiseFilms = useGetChoiseFilms();
+  const isAuth = useSelector((state)=> state.userAuthReducer.auth)
+ 
+  useEffect( ()=>{
+    localStorage.setItem("authStatus", isAuth ) 
+  }, [isAuth])
+
   return (
     <div className='countainer-content'>
       <Sidebar />
@@ -20,10 +27,7 @@ const main = () => {
       {nowFilterFilms.slice(...getPages(page)).map((item) => (
           <ItemFilm key={item.id} {...item}/> 
         ))}
-
-        {/* {nowFilterFilms.map((item) => (
-          <ItemFilm key={item.id} {...item}/> 
-        ))} */}
+ 
       </div>
     </div>
   );
