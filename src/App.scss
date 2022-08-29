@@ -192,5 +192,36 @@ header {
 }
 .modal-form {
   display: flex;
-    flex-direction: column; 
+  flex-direction: column;
+}
+
+.film-page {
+  display: flex;
+  height: 90vh;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-color: rgba(41, 41, 41, 0.7) !important;
+  background-blend-mode: multiply;
+  align-items: center;
+  justify-content: space-evenly;
+  .film-page-desctiptor {
+    width: 450px;
+  }
+  img {
+    height: 450px;
+  }
+  p {
+    color: white;
+    margin-bottom: 1em;
+  }
+}
+.search-page {
+  color: white;
+}
+.film-genre-box {
+  display: flex;
+  flex-direction: column;
+}
+.sorted-box {
+  padding: 20px 4%;
 }
